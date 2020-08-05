@@ -17,3 +17,23 @@ Fix:
 `[i for i in range(len(List)) if List[i] == 0]`
 
 output: [1, 4]
+
+## IndexError: list index out of range
+
+Example:
+
+```sh
+nums1 = [1,2,3,0,0,0]
+nums2 = [2,5,6]
+```
+
+```sh
+for i in range(3):
+  j = i
+  print(j)
+  while nums1[j] <= nums2[i]:
+    j += 1
+    print("j",j)
+  nums1.insert(j,nums2[i])
+  nums1.pop()
+```
